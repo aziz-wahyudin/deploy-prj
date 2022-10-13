@@ -13,7 +13,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        script: 
+        script: |
           mkdir createdFromGithub
-          touch halo.text
+          cd createdFromGithub
+          touch halo.txt
           echo "Hello i'm created from github action" >> halo.txt
